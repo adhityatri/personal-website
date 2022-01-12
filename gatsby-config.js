@@ -1,8 +1,17 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `http://adhityatri.skom.id/`,
     },
     plugins: [
-
+        {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+                fonts: [
+                    `Heebo`,
+                    `Signika Negative\:400,500,700` // you can also specify font weights and styles
+                ],
+                display: 'swap'
+            }
+        }
     ]
 }

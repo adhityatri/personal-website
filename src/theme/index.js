@@ -1,11 +1,17 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
+
 const theme = {
     colors: {
-        bgLight: '#FEFEFF',
-        primary: '#FE654F'
+        bgLight: '#D8D8D8',
+        primary: '#FE654F',
+        border: '#FFFFEA'
     },
-    space: '14px'
+    fonts: {
+        heading: 'Signika Negative'
+    },
+    space: '14px',
+    spaceLayout: '20%'
 }
 
 const Theme = ({ children }) => (
