@@ -5,8 +5,11 @@ import GlobalStyle from '../theme/global.style'
 import styled from 'styled-components'
 
 const Content = styled.div`
-    margin: 0 ${props => props.theme.layout.space};
+    margin: 0 ${props => props.theme.space};
     padding: ${props => props.theme.space} 0;
+    @media ${props => props.theme.breakpoints.md}{
+        margin: 0 ${props => props.theme.layout.space};
+    }
     @media ${props => props.theme.breakpoints.xxl}{
         margin: 0 ${props => props.theme.layout.spaceLarge};
     }

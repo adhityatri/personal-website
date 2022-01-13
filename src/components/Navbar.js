@@ -15,7 +15,10 @@ const Brand = styled.div`
 
 const Header = styled.header`
     border-bottom: 1px solid ${props => props.theme.colors.border};
-    padding: 0 ${props => props.theme.layout.space};
+    padding: 0 ${props => props.theme.space};
+    @media ${props => props.theme.breakpoints.md}{
+        padding: 0 ${props => props.theme.layout.space};
+    }
     @media ${props => props.theme.breakpoints.xxl}{
         padding: 0 ${props => props.theme.layout.spaceLarge};
     }

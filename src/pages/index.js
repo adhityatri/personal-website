@@ -1,14 +1,13 @@
-import React from 'react'
-import Layouts from '../components/Layouts'
+import React from "react";
+import Layouts from "../components/Layouts";
+import Hero from '../components/Hero'
 
 function index() {
-    return (
-        <Layouts>
-            <div>
-                Hello, it's gatsby
-            </div>
-        </Layouts>
-    )
+  return (
+    <Layouts>
+      <Hero />
+    </Layouts>
+  );
 }
 
-export default index
+export default index;
