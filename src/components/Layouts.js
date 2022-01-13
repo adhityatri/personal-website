@@ -5,8 +5,11 @@ import GlobalStyle from '../theme/global.style'
 import styled from 'styled-components'
 
 const Content = styled.div`
-    padding: ${props => props.theme.space};
-    /* border: 1px solid ${props => props.theme.colors.primary}; */
+    margin: 0 ${props => props.theme.layout.space};
+    padding: ${props => props.theme.space} 0;
+    @media ${props => props.theme.breakpoints.xxl}{
+        margin: 0 ${props => props.theme.layout.spaceLarge};
+    }
 `
 
 function Layouts({ children }) {

@@ -5,13 +5,25 @@ const theme = {
     colors: {
         bgLight: '#D8D8D8',
         primary: '#FE654F',
-        border: '#FFFFEA'
+        border: '#FFFFEA',
+        text: '#19323C'
     },
     fonts: {
         heading: 'Signika Negative'
     },
     space: '14px',
-    spaceLayout: '20%'
+    layout: {
+        space: '20%',
+        spaceLarge: '30%',
+    },
+    breakpoints: {
+        xs: "(min-width: 0)",
+        sm: "(min-width : 576px)",
+        md: "(min-width: 768px)",
+        lg: "(min-width: 992px)",
+        xl: "(min-width: 1200px)",
+        xxl: "(min-width: 1400px)"
+    }
 }
 
 const Theme = ({ children }) => (
