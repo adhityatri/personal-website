@@ -9,7 +9,8 @@ const theme = {
         text: '#19323C'
     },
     fonts: {
-        heading: 'Signika Negative'
+        heading: 'Signika Negative',
+        indent: "30px"
     },
     space: '14px',
     layout: {

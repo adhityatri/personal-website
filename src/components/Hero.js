@@ -9,10 +9,17 @@ const HeroWrapper = styled.div`
   background: rgba(255, 255, 255, 0.2);
   display: flex;
   overflow: hidden;
+  margin-top: 24px;
+  margin-bottom: ${props => props.theme.space}
 `;
 
-const GreethingTitle = styled.h1`
+const GreethingTitle = styled.span`
   margin: 0;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: ${props => props.theme.space};
+  font-family: ${props => props.theme.fonts.heading}
 `;
 const GreethingDescription = styled.p`
   margin: 0;
@@ -42,24 +49,34 @@ const ImageWrapper = styled.div`
   opacity: 0.9;
 `;
 
+const ButtonPorto = styled.button`
+  border: 0;
+  margin-top: 6px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: ${props => props.theme.colors.primary};
+  font-size: 0.875em;
+  color: white;
+`;
+
 function Hero() {
   return (
     <HeroWrapper>
       <Greething>
         <>
-          <GreethingTitle>Hello,</GreethingTitle>
+          <GreethingTitle>Hello,<br /> I am Adhitya Tri</GreethingTitle>
           <GreethingDescription>
-            I'm a frontend developer based in Indonesia!
+            Adhitya is a frontend developer based in Indonesia!
           </GreethingDescription>
+          <ButtonPorto>My Portofolio</ButtonPorto>
         </>
 
         <ImageWrapper>
           <StaticImage
             src="../images/me.png"
-            alt="A dinosaur"
+            alt="Me"
             placeholder="blurred"
-            height={250}
-            width={200}
+            height={300}
           />
         </ImageWrapper>
       </Greething>
