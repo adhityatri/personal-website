@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import NavLink from './Nav-Link'
 
 const Navigation = styled.nav`
 `
 
 const Brand = styled.div`
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 600;
     font-family: ${props => props.theme.fonts.heading};
     color: ${props => props.theme.colors.text};
+    letter-spacing : 4px;
 `
 
 const Header = styled.header`
@@ -47,7 +48,9 @@ const Header = styled.header`
 function Navbar({ children }) {
     return (
         <Header>
-            <Brand>Portofolio</Brand>
+            <Brand>
+                <Link to="/">ATWU</Link>
+            </Brand>
             <Navigation>
                 <NavLink to="/works">Works</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
