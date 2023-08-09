@@ -2,6 +2,7 @@
 import navbar from "./components/navbar.vue";
 import about from "./components/about.vue";
 import projects from "./components/projects.vue";
+import experience from "./components/experience.vue";
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import projects from "./components/projects.vue";
   <div class="body-wrapper">
     <about />
     <projects />
-    <section ref="experience">Experience</section>
+    <experience />
   </div>
 </template>
 
@@ -21,5 +22,6 @@ import projects from "./components/projects.vue";
   flex: 1;
   background-color: var(--primary);
   flex-direction: column;
+  overflow: hidden;
 }
 </style>

@@ -5,7 +5,7 @@
     <img class="pattern" src="@/assets/Pattern1.svg" alt="">
     <div class="hello">Hello, I'm</div>
     <div class="name">Adhitya Tri Wahyu Utomo</div>
-    <div class="role">( Software Engineer with Frontend Focus )</div>
+    <div class="role">Software Engineer</div>
 
     <p class="describe">
       Experienced of developing a website as a Front End with 8 years of
@@ -65,5 +65,6 @@
     position: absolute;
     bottom: -6rem;
     right: -1rem;
+    z-index: 1;
 }
 </style>

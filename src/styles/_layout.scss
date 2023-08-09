@@ -1,11 +1,11 @@
 .container {
   padding: 0 8%;
 
-  @media screen and (min-width: 1024px) {
+  @media (1024px <= width <= 1366px){
     padding: 0 16%;
   }
 
-  @media screen and (min-width: 1367px) {
+  @media (width >= 1367px) {
     padding: 0 22%;
   }
 }

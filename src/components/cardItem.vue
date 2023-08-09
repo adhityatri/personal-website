@@ -1,0 +1,95 @@
+<script lang="ts" setup>
+const props = defineProps({
+  name: String,
+  logo: String,
+  institusi: String,
+  periode: String,
+  stacks: Array,
+});
+</script>
+<template>
+  <div class="card-item">
+    <div class="card-item-desc">
+      <img class="card-item-logo" :src="props.logo" alt="" />
+      <span class="card-item-title">{{ props.name }}</span>
+      <small class="card-item-subtitle">{{ props.institusi }}</small>
+    </div>
+
+    <div class="stack">
+        <div class="stack-title">Featured technologies used :</div>
+        <div class="stack-list">
+            <img
+                v-for="(item, index) in stacks"
+                :key="index"
+                :src="`/stacks/${item.logo}.png`"
+                alt=""
+            />
+        </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.card-item {
+  width: 100%;
+  background-color: $based-color;
+  color: $text-color;
+  border: 4px solid white;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0px 4px 14px 0 transparentize($color: #000000, $amount: 0.8);
+  transition-delay: .1s;
+  transition: border-color .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover{
+    border-color: darken($primary-color, 20%);
+  }
+
+  &-desc{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &-logo {
+    width: 72px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 10px 10px 20px #dedede, -10px -10px 20px #ffffff;
+  }
+
+  &-title {
+    font-weight: bold;
+  }
+  &-subtitle {
+    font-weight: 500;
+    color: $text-color-secondary;
+  }
+}
+
+.stack {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &-title{
+        font-weight: 500;
+        color: $text-color-secondary;
+    }
+    &-list{
+        display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: -.4rem;
+        img {
+            width: 48px;
+        }
+    }
+}
+</style>
