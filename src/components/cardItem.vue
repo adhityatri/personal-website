@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+import { stack } from '../types/projects';
 const props = defineProps({
   name: String,
   logo: String,
   institusi: String,
   periode: String,
-  stacks: Array,
+  stacks: Array<stack>,
 });
 </script>
 <template>
@@ -19,9 +20,8 @@ const props = defineProps({
         <div class="stack-title">Featured technologies used :</div>
         <div class="stack-list">
             <img
-                v-for="(item, index) in stacks"
-                :key="index"
-                :src="`/stacks/${item.logo}.png`"
+                v-for="items in stacks"
+                :src="`/stacks/${items.logo}.png`"
                 alt=""
             />
         </div>

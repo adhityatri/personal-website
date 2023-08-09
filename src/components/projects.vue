@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import cardItem from "./cardItem.vue";
-import project from "../types/projects";
+import { project } from "../types/projects";
 import { ref } from "vue";
 
 const list = ref<project[]>([
@@ -204,12 +204,14 @@ const list = ref<project[]>([
     </p>
 
     <div class="projects-list">
-      <card-item v-for="(item, index) in list" :key="index" 
-        :name="item.name" 
-        :stacks="item.stacks" 
-        :institusi="item.institusi" 
+      <card-item
+        v-for="(item, index) in list"
+        :key="index"
+        :name="item.name"
+        :stacks="item.stacks"
+        :institusi="item.institusi"
         :periode="item.periode"
-        :logo="`/${item.logo}.svg`" 
+        :logo="`/${item.logo}.svg`"
       />
     </div>
   </div>
@@ -230,7 +232,7 @@ const list = ref<project[]>([
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 
-    &-more{
+    &-more {
       border: 3px solid white;
       border-radius: 1rem;
       display: flex;
