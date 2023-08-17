@@ -245,6 +245,7 @@ const list = ref<project[]>([
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  line-height: 4rem;
 }
 
 .describe {

@@ -7,7 +7,7 @@ import brand from "./brand.vue";
   <div class="container navbar">
     <brand />
     <menu-item />
-    <button class="button button-discuss">Let's Discuss</button>
+    <button class="button button-discuss">Get In Touch</button>
   </div>
 </template>
 

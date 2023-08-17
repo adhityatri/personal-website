@@ -4,6 +4,7 @@
         <div class="menu-item">About</div>
         <div class="menu-item">Project</div>
         <div class="menu-item">Experiences</div>
+        <div class="menu-item">Services</div>
     </nav>
 </template>
 

@@ -39,14 +39,8 @@ const props = defineProps({
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
   box-shadow: 0px 4px 14px 0 transparentize($color: #000000, $amount: 0.8);
-  transition-delay: .1s;
-  transition: border-color .2s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &:hover{
-    border-color: darken($primary-color, 20%);
-  }
 
   &-desc{
     display: flex;
@@ -60,6 +54,7 @@ const props = defineProps({
     margin-bottom: 1rem;
     background: linear-gradient(145deg, #e6e6e6, #ffffff);
     box-shadow: 10px 10px 20px #dedede, -10px -10px 20px #ffffff;
+    border: 2px solid white;
   }
 
   &-title {
