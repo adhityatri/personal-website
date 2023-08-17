@@ -120,7 +120,6 @@ h1 {
   flex-direction: column;
 
   .left {
-    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,6 +165,15 @@ h1 {
   text-align: left;
 }
 
+@media (520px <= width) {
+  ::v-deep .work-list {
+    list-style-type: circle;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: left;
+  }
+}
+
 @media (1024px <= width) {
   h1 {
     font-size: 4rem;
@@ -177,6 +185,7 @@ h1 {
     padding: 4rem;
 
     .left {
+      width: 250px;
       align-items: flex-start;
     }
 
