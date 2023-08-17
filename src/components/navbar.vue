@@ -12,5 +12,5 @@ import brand from "./brand.vue";
 </template>
 
 <style lang="scss" scoped>
-
+.navbar{}
 </style>

@@ -44,7 +44,11 @@ const list = ref<experience[]>([
     <img class="pattern" src="/pattern2.png" alt="pattern-2" />
     <h1>Work <br />Experiences</h1>
     <div class="experience-body">
-      <div v-for="(item, index) in list" :key="index" class="card-experience latest">
+      <div
+        v-for="(item, index) in list"
+        :key="index"
+        class="card-experience latest"
+      >
         <div class="left">
           <img :src="`/${item.logo}`" alt="" />
           <span class="cName">{{ item.companyName }}</span>
@@ -76,9 +80,9 @@ const list = ref<experience[]>([
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
-  line-height: 4rem;
+  line-height: 3rem;
 }
 
 .describe {
@@ -90,11 +94,12 @@ h1 {
   position: absolute;
   left: 2%;
   top: 8rem;
-  width: 12rem;
+  width: 8rem;
   z-index: -1;
 
   @media (1024px <= width <= 1366px) {
     left: 10%;
+    width: 12rem;
   }
 
   @media (width >= 1367px) {
@@ -109,14 +114,16 @@ h1 {
   border: 2px solid white;
   border-radius: 1rem;
   margin-bottom: 3rem;
-  padding: 4rem;
+  padding: 2rem;
   display: flex;
   gap: 2rem;
+  flex-direction: column;
 
   .left {
     width: 250px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     img {
       background: linear-gradient(145deg, #e6e6e6, #ffffff);
       box-shadow: 10px 10px 20px #dedede, -10px -10px 20px #ffffff;
@@ -147,16 +154,42 @@ h1 {
     color: $primary-color;
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    text-align: right;
-    // border-bottom: 3px solid ;
+    text-align: center;
     text-decoration: underline wavy 3px;
   }
 }
 
 ::v-deep .work-list {
   list-style-type: circle;
-  font-size: 1.1rem;
-  line-height: 2rem;
-  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+@media (1024px <= width) {
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .card-experience {
+    flex-direction: row;
+    padding: 4rem;
+
+    .left {
+      align-items: flex-start;
+    }
+
+    .role {
+      text-align: right;
+    }
+  }
+
+  ::v-deep .work-list {
+    list-style-type: circle;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: justify;
+  }
 }
 </style>

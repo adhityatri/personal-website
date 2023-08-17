@@ -229,8 +229,12 @@ const list = ref<project[]>([
   &-list {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
+
+    @media (1024px <= width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     &-more {
       border: 3px solid white;

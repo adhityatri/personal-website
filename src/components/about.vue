@@ -31,11 +31,12 @@ import AppSosmed from "./AppSosmed.vue";
 }
 
 .hello {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: $text-color-secondary;
 }
+
 .name {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -43,11 +44,15 @@ import AppSosmed from "./AppSosmed.vue";
   &:before {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 1rem;
     left: 0;
     height: 30px;
     width: 200px;
-    background: linear-gradient(90deg, $primary-color 0%, rgba(255, 122, 0, 0) 100%);
+    background: linear-gradient(
+      90deg,
+      $primary-color 0%,
+      rgba(255, 122, 0, 0) 100%
+    );
     z-index: -1;
   }
 }
@@ -65,8 +70,33 @@ import AppSosmed from "./AppSosmed.vue";
 
 .pattern {
   position: absolute;
-  bottom: -6rem;
+  bottom: -12rem;
   right: -1rem;
   z-index: 1;
+  height: 12rem;
+}
+
+@media (1024px <= width) {
+  .about {
+    min-height: 600px;
+  }
+
+  .hello{
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 3rem;
+
+    &:before {
+      bottom: 0;
+    }
+  }
+  .pattern {
+    position: absolute;
+    bottom: -6rem;
+    right: -1rem;
+    z-index: 1;
+  }
 }
 </style>
