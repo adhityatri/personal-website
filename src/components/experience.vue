@@ -44,7 +44,7 @@ const list = ref<experience[]>([
     <img class="pattern" src="/pattern2.png" alt="pattern-2" />
     <h1>Work <br />Experiences</h1>
     <div class="experience-body">
-      <div v-for="item in list" :key="item" class="card-experience latest">
+      <div v-for="(item, index) in list" :key="index" class="card-experience latest">
         <div class="left">
           <img :src="`/${item.logo}`" alt="" />
           <span class="cName">{{ item.companyName }}</span>
@@ -93,7 +93,7 @@ h1 {
   width: 12rem;
   z-index: -1;
 
-  @media (1024px <= width <= 1366px){
+  @media (1024px <= width <= 1366px) {
     left: 10%;
   }
 
@@ -127,7 +127,7 @@ h1 {
     .cName {
       font-weight: bold;
       margin-top: 2rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       color: $text-color;
     }
 
@@ -142,7 +142,7 @@ h1 {
     flex-direction: column;
   }
 
-  .role{
+  .role {
     font-weight: bold;
     color: $primary-color;
     font-size: 1.3rem;
@@ -153,7 +153,7 @@ h1 {
   }
 }
 
-::v-deep .work-list{
+::v-deep .work-list {
   list-style-type: circle;
   font-size: 1.1rem;
   line-height: 2rem;
