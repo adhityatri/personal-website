@@ -2,6 +2,17 @@
 import { ref } from "vue";
 import { sosmed } from "../types/sosmed";
 
+const props = defineProps({
+  solid: {
+    type: Boolean,
+    default: false,
+  },
+  sosmedOnly: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const sosmedData = ref<sosmed[]>([
   {
     name: "LinkedIn",
@@ -21,8 +32,8 @@ const open = (item: string) => {
 </script>
 
 <template>
-  <ul class="sosmed">
-    <li><span>Check out My :</span></li>
+  <ul class="sosmed" :class="solid ? 'solid' : ''">
+    <li v-if="!sosmedOnly"><span>Check out My :</span></li>
     <li @click="open(item.link)" v-for="item in sosmedData">
       <img :src="`/${item.logo}.svg`" :alt="item.name" />
     </li>
@@ -45,7 +56,7 @@ const open = (item: string) => {
       margin-right: 1rem;
       cursor: auto;
 
-      &:hover{
+      &:hover {
         border-color: transparent;
       }
     }
@@ -69,6 +80,19 @@ const open = (item: string) => {
 
     img {
       height: 32px;
+    }
+  }
+
+  &.solid {
+    li {
+      box-shadow: unset;
+      padding: .75rem;
+      background: transparent;
+      border-color: transparentize($color: white, $amount: 0.7);
+
+      &:hover{
+        border-color: white;
+      }
     }
   }
 }

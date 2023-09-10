@@ -3,6 +3,8 @@ import navbar from "./components/navbar.vue";
 import about from "./components/about.vue";
 import projects from "./components/projects.vue";
 import experience from "./components/experience.vue";
+import keepInTouch from "./components/KeepInTouch.vue";
+import footerSection from "./components/footer.vue";
 </script>
 
 <template>
@@ -13,6 +15,8 @@ import experience from "./components/experience.vue";
     <about />
     <projects />
     <experience />
+    <keep-in-touch />
+    <footerSection />
   </div>
 </template>
 

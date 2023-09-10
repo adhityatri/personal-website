@@ -7,14 +7,11 @@ import AppSosmed from "./AppSosmed.vue";
     <img class="pattern" src="@/assets/Pattern1.svg" alt="" />
     <div class="hello">Hello, I'm</div>
     <div class="name">Adhitya Tri Wahyu Utomo</div>
-    <!-- <div class="role">Front-End Developer</div> -->
 
     <p class="describe">
       Experienced Front End Developer with 8 years of proven experience in
       helping companies create and maintain a better codebase.
     </p>
-
-    <!-- <button class="button big button-discuss-primary">Get In Touch</button> -->
     <AppSosmed />
   </section>
 </template>
@@ -81,7 +78,7 @@ import AppSosmed from "./AppSosmed.vue";
     min-height: 600px;
   }
 
-  .hello{
+  .hello {
     font-size: 2rem;
   }
 

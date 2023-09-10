@@ -1,9 +1,55 @@
 <script setup lang="ts">
-import cardItem from "./cardItem.vue";
-import { project } from "../types/projects";
 import { ref } from "vue";
+import { project } from "../types/projects";
+import cardItem from "./cardItem.vue";
 
 const list = ref<project[]>([
+  {
+    name: "Dreamwell",
+    description: "",
+    logo: "pertamina",
+    institusi: "Pertamina",
+    periode: "2022",
+    stacks: [
+      {
+        logo: "js",
+        name: "js",
+      },
+      {
+        logo: "html5",
+        name: "html5",
+      },
+      {
+        logo: "highcharts",
+        name: "highcharts",
+      },
+    ],
+  },
+  {
+    name: "PADSIM",
+    description: "",
+    logo: "pertamina",
+    institusi: "Pertamina",
+    periode: "2022",
+    stacks: [
+      {
+        logo: "nuxtjs",
+        name: "nuxtjs",
+      },
+      {
+        logo: "element",
+        name: "element",
+      },
+      {
+        logo: "sass",
+        name: "sass",
+      },
+      {
+        logo: "git",
+        name: "git",
+      },
+    ],
+  },
   {
     name: "Smart Alarm",
     description: "",
@@ -84,7 +130,7 @@ const list = ref<project[]>([
     ],
   },
   {
-    name: "Portal Site",
+    name: "Portal Site, PPDB, Mobile Siakad",
     description: "",
     logo: "ppai",
     institusi: "PPAI Darunnajah",
@@ -95,92 +141,16 @@ const list = ref<project[]>([
         name: "vuejs",
       },
       {
-        logo: "sass",
-        name: "sass",
-      },
-      {
-        logo: "git",
-        name: "git",
-      },
-    ],
-  },
-  {
-    name: "PPDB",
-    description: "",
-    logo: "ppai",
-    institusi: "PPAI Darunnajah",
-    periode: "2021",
-    stacks: [
-      {
         logo: "nuxtjs",
         name: "nuxtjs",
-      },
-      {
-        logo: "sass",
-        name: "sass",
-      },
-      {
-        logo: "git",
-        name: "git",
       },
       {
         logo: "element",
         name: "element",
       },
-    ],
-  },
-  {
-    name: "Siakad Mobile",
-    description: "",
-    logo: "ppai",
-    institusi: "PPAI Darunnajah",
-    periode: "2021",
-    stacks: [
       {
         logo: "flutter",
         name: "flutter",
-      },
-      {
-        logo: "git",
-        name: "git",
-      },
-    ],
-  },
-  {
-    name: "Dreamwell",
-    description: "",
-    logo: "pertamina",
-    institusi: "Pertamina",
-    periode: "2022",
-    stacks: [
-      {
-        logo: "js",
-        name: "js",
-      },
-      {
-        logo: "html5",
-        name: "html5",
-      },
-      {
-        logo: "highcharts",
-        name: "highcharts",
-      },
-    ],
-  },
-  {
-    name: "PADSIM",
-    description: "",
-    logo: "pertamina",
-    institusi: "Pertamina",
-    periode: "2022",
-    stacks: [
-      {
-        logo: "nuxtjs",
-        name: "nuxtjs",
-      },
-      {
-        logo: "element",
-        name: "element",
       },
       {
         logo: "sass",
@@ -205,7 +175,7 @@ const list = ref<project[]>([
 
     <div class="projects-list">
       <card-item
-        v-for="(item, index) in list"
+        v-for="(item, index) in list.reverse()"
         :key="index"
         :name="item.name"
         :stacks="item.stacks"
