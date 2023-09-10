@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <span class="brand" :class="theme === 'dark' ? 'dark' : ''"
+  <span class="brand" :class="props.theme === 'dark' ? 'dark' : ''"
     ><strong>Adhit</strong>ya Tri</span
   >
 </template>
