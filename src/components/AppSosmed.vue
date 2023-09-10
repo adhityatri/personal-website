@@ -32,8 +32,8 @@ const open = (item: string) => {
 </script>
 
 <template>
-  <ul class="sosmed" :class="solid ? 'solid' : ''">
-    <li v-if="!sosmedOnly"><span>Check out My :</span></li>
+  <ul class="sosmed" :class="props.solid ? 'solid' : ''">
+    <li v-if="!props.sosmedOnly"><span>Check out My :</span></li>
     <li @click="open(item.link)" v-for="item in sosmedData">
       <img :src="`/${item.logo}.svg`" :alt="item.name" />
     </li>
