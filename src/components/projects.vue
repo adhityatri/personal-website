@@ -163,6 +163,7 @@ const list = ref<project[]>([
     ],
   },
 ]);
+
 </script>
 
 <template>
@@ -175,7 +176,7 @@ const list = ref<project[]>([
 
     <div class="projects-list">
       <card-item
-        v-for="(item, index) in list.reverse()"
+        v-for="(item, index) in list"
         :key="index"
         :name="item.name"
         :stacks="item.stacks"
