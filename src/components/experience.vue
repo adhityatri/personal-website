@@ -57,7 +57,7 @@ const list = ref<experience[]>([
         <div class="right">
           <span class="role">{{ item.role }}</span>
 
-          <div v-html="item.workDescription" />
+          <div v-html="item.workDescription" ></div>
         </div>
       </div>
     </div>
