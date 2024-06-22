@@ -1,3 +1,6 @@
 <template>
-    <div>Hello</div>
+    <div>
+        Hello From Pages Update
+        <Test />    
+    </div>
 </template>

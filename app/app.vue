@@ -1,5 +1,6 @@
 <template>
     <div>
-        Hello
-        </div>
-    </template>
+        this is app file
+        <NuxtPage />
+    </div>
+</template>
