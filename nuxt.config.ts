@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   experimental: {
-    componentIslands: true
+    componentIslands: true,
   },
 
   modules: ["@nuxt/ui"],

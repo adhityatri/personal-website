@@ -1,6 +1,8 @@
 <template>
-    <div>
+    <UContainer class="bg-base">
         Hello From Pages Update
-        <Test />    
-    </div>
+        <UButton type="primary">
+            Hello
+            </UButton>
+    </UContainer>
 </template>
