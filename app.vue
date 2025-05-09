@@ -1,9 +1,8 @@
 <template>
-  <div class="h-screen flex flex-col bg-white text-black ring-2">
-    <app-header />
-    <div class="flex-1">
+  <UApp class="flex flex-col">
+    <top-bar />
+    <UContainer as="main" class="flex flex-1 mt-4 px-0! py-0!">
       <NuxtPage />
-    </div>
-    <app-footer />
-  </div>
+    </UContainer>
+  </UApp>
 </template>

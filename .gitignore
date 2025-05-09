@@ -21,6 +21,7 @@ logs
 
 # Local env files
 .package-lock.json
+bun.lock
 .env
 .env.*
 !.env.example

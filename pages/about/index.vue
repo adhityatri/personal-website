@@ -1,5 +1,5 @@
 <template>
     <div>
-        this from server rendering mantab
+        About Men
     </div>
 </template>
