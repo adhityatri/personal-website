@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center gap-2">
-    <nuxt-link to="/"> Jadi<b>Mudah</b>.id </nuxt-link>
+    <nuxt-link to="/"> Jadi<b class="text-[#006d77]">Mudah</b></nuxt-link>
     <div> | </div>
     <Transition name="fade" mode="out-in">
       <div class="text-md" :key="currentText">{{ currentText }}</div>

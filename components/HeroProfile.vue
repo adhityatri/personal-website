@@ -11,7 +11,10 @@
         class="absolute z-0 left-0 bottom-10 bg-[#006d77] rounded-[40px] w-[50px] h-[50px]"
       />
       <div
-        class="z-1 ring-10 mr-4 ring-[#83c5be] relative rounded-[80px] overflow-hidden border-2 border-white w-[300px]"
+        class="absolute z-0 left-1 bottom-11 bg-neutral-100 rounded-[40px] w-[40px] h-[40px]"
+      />
+      <div
+        class="z-1 ring-10 mr-4 ring-[#83c5be] relative rounded-[80px] overflow-hidden border-4 border-neutral-100 w-[300px]"
       >
         <img src="/me.jpg" alt="" />
       </div>
