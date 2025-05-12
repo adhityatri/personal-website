@@ -29,13 +29,7 @@
         {{ hero.description }}
       </p>
       <div class="flex gap-4 items-center">
-        <UButton
-          icon="line-md:coffee-half-empty-twotone-loop"
-          class="w-fit bg-[#006d77] hover:bg-[#83c5be]"
-          size="xl"
-        >
-          Let's Talk
-        </UButton>
+        <get-in-touch />
         <social-media />
       </div>
     </div>
