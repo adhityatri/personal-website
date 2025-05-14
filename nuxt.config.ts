@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   app: {
     head: {
       title: 'Adhitya Tri Wahyu Utomo | Software Engineer',
@@ -15,7 +16,9 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap'
         }
       ]
-    }
+    },
+    baseURL: '/personal-website/',
+    buildAssetsDir: 'assets'
   },
   devtools: { enabled: false },
   compatibilityDate: '2025-05-01',

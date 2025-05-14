@@ -16,7 +16,7 @@
       <div
         class="z-1 ring-10 mr-4 ring-[#83c5be] relative rounded-[80px] overflow-hidden border-4 border-neutral-100 w-[300px]"
       >
-        <img src="/me.jpg" alt="" />
+        <img src="~assets/images/me.jpg" alt="" />
       </div>
     </div>
     <div class="flex flex-col p-4 px-8 rounded-xl justify-center flex-1">

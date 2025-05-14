@@ -1,5 +1,6 @@
 {
-  "name": "jadimudah.my.id",
+  "name": "utomosolutions.com",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,10 +8,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@nuxt/ui": "^3.1.1",
+    "gh-pages": "^6.3.0",
     "nuxt": "^3.17.1",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
