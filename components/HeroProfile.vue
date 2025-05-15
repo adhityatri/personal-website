@@ -1,24 +1,10 @@
 <template>
-  <div class="flex gap-4 justify-center items-center min-h-[500px]">
-    <div class="relative overflow-hidden flex w-[420px] p-4 justify-end">
-      <div
-        class="absolute z-0 left-10 top-10 bg-[#006d77] rounded-[50px] w-[100px] h-[50%]"
-      />
-      <div
-        class="absolute z-0 right-0 bottom-10 bg-[#ffddd2] rounded-[40px] w-[100px] h-[50%]"
-      />
-      <div
-        class="absolute z-0 left-0 bottom-10 bg-[#006d77] rounded-[40px] w-[50px] h-[50px]"
-      />
-      <div
-        class="absolute z-0 left-1 bottom-11 bg-neutral-100 rounded-[40px] w-[40px] h-[40px]"
-      />
-      <div
-        class="z-1 ring-10 mr-4 ring-[#83c5be] relative rounded-[80px] overflow-hidden border-4 border-neutral-100 w-[300px]"
-      >
-        <img src="~assets/images/me.jpg" alt="" />
-      </div>
-    </div>
+  <div
+    :class="`flex gap-4 justify-center items-center min-h-[500px] ${
+      isMobile ? 'flex-col' : 'flex-row'
+    }`"
+  >
+    <hero-image />
     <div class="flex flex-col p-4 px-8 rounded-xl justify-center flex-1">
       <div class="">
         <div class="text-[2.5rem] text-gray-600">Hello,</div>
@@ -28,10 +14,12 @@
           {{ hero.position }}
         </div>
       </div>
-      <p class="max-w-[400px] my-7 text-balance">
+      <p
+        :class="`my-7 text-balance ${isMobile ? 'w-full' : 'max-w-[400px]'}`"
+      >
         {{ hero.description }}
       </p>
-      <div class="flex gap-4 items-center">
+      <div :class="`flex gap-4 ${isMobile ? 'flex-col items-start' : 'flex-row items-center'}`">
         <get-in-touch />
         <social-media />
       </div>
@@ -40,6 +28,8 @@
 </template>
 
 <script setup lang="ts">
+const { isMobile } = useDevice();
+
 const hero = ref({
   name: 'Adhitya Tri W. U.',
   position: 'Software Engineer',

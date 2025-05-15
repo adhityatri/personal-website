@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   experimental: {
     componentIslands: true
   },
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxt/ui', '@nuxtjs/device'],
   css: ['~/assets/css/main.css'],
   ui: {
     colorMode: false,

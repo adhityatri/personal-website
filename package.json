@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^3.1.1",
+    "@nuxtjs/device": "^3.2.4",
     "gh-pages": "^6.3.0",
     "nuxt": "^3.17.1",
     "vue": "^3.4.29",

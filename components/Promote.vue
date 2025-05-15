@@ -1,5 +1,9 @@
 <template>
-  <div class="p-8 bg-[#ffddd2] rounded-2xl shadow-xl flex flex-col">
+  <div
+    :class="`${
+      isMobile ? 'w-[85%] self-center' : 'w-full'
+    } p-8 bg-[#ffddd2] rounded-2xl shadow-xl flex flex-col`"
+  >
     <div class="text-2xl font-bold text-gray-700">
       Interested in collaborating with me?
     </div>
@@ -17,6 +21,7 @@
 </template>
 
 <script setup lang="ts">
+const { isMobile } = useDevice();
 defineProps({
   withAction: {
     type: Boolean,

@@ -1,16 +1,17 @@
 <template>
   <div class="flex items-center gap-2">
     <nuxt-link to="/"><b class="text-[#006d77]">UTOMO</b>SOLUTIONS</nuxt-link>
-    <div> | </div>
-    <Transition name="fade" mode="out-in">
-      <div class="text-md" :key="currentText">{{ currentText }}</div>
-    </Transition>
+    <template v-if="!isMobile">
+      <div>|</div>
+      <Transition name="fade" mode="out-in">
+        <div class="text-md" :key="currentText">{{ currentText }}</div>
+      </Transition>
+    </template>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-
+const { isMobile } = useDevice();
 const texts = [
   'Adhitya Tri Wahyu Utomo',
   'Software Engineer',
