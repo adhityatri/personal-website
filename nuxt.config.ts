@@ -16,9 +16,7 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap'
         }
       ]
-    },
-    baseURL: '/personal-website/',
-    buildAssetsDir: 'assets'
+    }
   },
   devtools: { enabled: false },
   compatibilityDate: '2025-05-01',
