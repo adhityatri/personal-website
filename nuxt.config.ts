@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     head: {
-      title: 'Adhitya Tri Wahyu Utomo | Software Engineer',
+      title: 'utomosolutions.com | Adhitya Tri Wahyu Utomo | Software Engineer',
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         {
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap'
+          href: 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap'
         }
       ]
     },
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false,
     theme: {
-      colors: ['primary', 'error']
+      // colors: ['primary', 'error'],
     }
   },
   devServer: {

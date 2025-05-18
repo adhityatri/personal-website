@@ -1,22 +1,30 @@
 <template>
-  <div :class="`${isMobile ? 'w-[85%] self-center' : 'w-full'} flex flex-col gap-2`">
-    <app-title>Lattest Projects</app-title>
+  <div
+    :class="`${
+      isMobile ? 'w-[85%] self-center' : 'w-full'
+    } flex flex-col gap-2`"
+  >
+    <app-title>Latest Selected Projects</app-title>
 
     <div class="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       <card v-for="(item, index) in projectList" :key="index">
-        <div class="font-bold flex-1">
+        <small class="text-[#006d77]">{{ item.client }}</small>
+        <div class="font-bold text-gray-700">
           {{ item.title }}
         </div>
 
+        <span class="mt-4 text-sm line-clamp-2">{{ item.descriptions ?? ' No Descriptions ' }}</span>
+
+        <br />
         <ul
-          class="flex flex-wrap items-start justify-start mt-4 gap-2 border-gray-300 pt-2"
+          class="flex flex-1 flex-wrap items-end justify-start mt-2 gap-2 border-gray-300 pt-2"
         >
           <li
             class="text-sm rounded-lg shadow-md bg-white hover:bg-[#83c5be] hover:text-[#006d77] transition-all duration-200 px-3! py-1!"
             v-for="(tech, index) in item.technology"
             :key="index"
           >
-            {{ tech }}
+            <span class="capitalize">{{ tech }}</span>
           </li>
         </ul>
       </card>
@@ -33,33 +41,24 @@
 </template>
 
 <script setup lang="ts">
+import project from '~/data/project.json';
 const { isMobile } = useDevice();
-const projectList = [
-  {
-    title: 'CMA : eSPGA App',
-    technology: ['Angular', '.net', 'git']
-  },
-  {
-    title: 'Komodoin : Virtual Assistant Module',
-    technology: ['nextJs', 'git']
-  },
-  {
-    title: 'Wiber.id',
-    technology: ['nuxtJs', 'scss', 'goLang', 'git']
-  },
-  {
-    title: 'McEasy : Smart Alarm',
-    technology: ['Ionic', 'Adobe Xd', 'Angular']
-  },
-  {
-    title: 'FKPPN : Portal Website',
-    technology: ['Vue/Nuxt', 'Scss', 'Express', 'Figma', 'Git', 'MySql']
-  },
-  {
-    title: 'POLTEKKES SURABAYA : SAKU',
-    technology: ['Nuxt', 'Scss', 'Figma', 'Git']
+const projectList = shallowRef(project);
+
+const props = defineProps({
+  mode: {
+    type: String as PropType<'homepage' | 'workpage'>,
+    default: 'homepage'
   }
-];
+});
+
+watchEffect(() => {
+  if (props.mode === 'homepage') {
+    projectList.value = project.slice(0, 3);
+  } else {
+    projectList.value = project;
+  }
+});
 
 const moreProject = async () => {
   await navigateTo({ name: 'work-pages' });

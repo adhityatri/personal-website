@@ -1,0 +1,55 @@
+[
+  {
+    "title": "e-SPGA App",
+    "client": "Cma Solutions",
+    "descriptions": "e-SPGA System is developed to fulfill the requirements of Angkatan Koperasi Kebangsaan Malaysia Berhad (ANGKASA) and to move e-SPGA from legacy proprietary platform to newer system architecture and infrastructure for better user experience and future expansion purposes",
+    "technology": ["Angular", ".net", "git"]
+  },
+  {
+    "title": "Komodoin: Virtual Assistant",
+    "client": "Digitalind",
+    "technology": ["nextJs", "git"]
+  },
+  {
+    "title": "Wiber.id",
+    "client": "Sayid Aziz Ghaffar SEI",
+    "descriptions": "Aplikasi tiket berbasis web dikembangkan untuk memfasilitasi pengelolaan permintaan layanan secara efisien dan terstruktur.",
+    "technology": ["NuxtJs", "Scss", "goLang", "git"]
+  },
+  {
+    "title": "READS",
+    "client": "Kriya Apta",
+    "descriptions": "A Drilling Application is a specialized digital solution designed to streamline, monitor, and manage drilling operations efficiently.",
+    "technology": ["figma", "git", "NuxtJs"]
+  },
+  {
+    "title": "PADSIM",
+    "client": "Pertamina",
+    "descriptions": "",
+    "technology": ["figma", "git", "NuxtJs"]
+  },
+  {
+    "title": "Bug Fix : Dreamwell",
+    "client": "Pertamina",
+    "descriptions": "",
+    "technology": ["figma", "git", "NuxtJs"]
+  },
+  {
+    "title": "McEasy : Smart Tracker GPS",
+    "client": "McEasy",
+    "descriptions": "",
+    "technology": ["Ionic", "Adobe Xd", "Angular"]
+  },
+  {
+    "title": "FKPPN : Portal Website",
+    "client": "Fkppn Surabaya",
+    "descriptions": "",
+    "technology": ["Vue/Nuxt", "Scss", "Express", "Figma", "Git", "MySql"]
+  },
+  {
+    "title": "SAKU APP",
+    "client": "Poltekkes Surabaya",
+    "descriptions": "",
+    "technology": ["NuxtJs", "Scss", "Figma", "Git"]
+  }
+]
