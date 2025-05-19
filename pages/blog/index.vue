@@ -24,8 +24,26 @@ definePageMeta({
   name: 'blog-pages'
 });
 
+useHead({
+  title: 'Blog - Adhitya Tri',
+  meta: [
+    { name: 'description', content: 'Explore insightful articles about web development, technology trends, and software engineering best practices.' },
+    { name: 'keywords', content: 'web development, software engineering, tech blog, programming tutorials' },
+    // OpenGraph tags for better social sharing
+    { property: 'og:title', content: 'Blog - Adhitya Tri' },
+    { property: 'og:description', content: 'Explore insightful articles about web development, technology trends, and software engineering best practices.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:site_name', content: 'Adhitya Tri' },
+    // Twitter Card tags
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Blog - Adhitya Tri' },
+    { name: 'twitter:description', content: 'Explore insightful articles about web development, technology trends, and software engineering best practices.' }
+  ]
+});
+
 const router = useRouter();
 const goBack = () => {
   router.back();
 };
+
 </script>

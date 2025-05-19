@@ -46,4 +46,18 @@ const profile = {
   phone: '+6285158022805',
   email: 'adhityatri.work@gmail.com'
 };
+
+useHead({
+  title: 'Contact - Adhitya Tri W. U. | Software Engineer',
+  meta: [
+    { name: 'description', content: 'Get in touch with Adhitya Tri Wahyu Utomo, a Software Engineer based in Jember, Indonesia. Available for software development projects and professional collaborations.' },
+    { name: 'keywords', content: 'Contact Adhitya, Software Engineer Contact, Web Developer Jember, Hire Software Engineer' },
+    { property: 'og:title', content: 'Contact - Adhitya Tri W. U. | Software Engineer' },
+    { property: 'og:description', content: 'Connect with Adhitya Tri Wahyu Utomo, a Software Engineer specializing in web development and scalable applications.' },
+    { property: 'og:type', content: 'profile' },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:title', content: 'Contact - Adhitya Tri W. U. | Software Engineer' },
+    { name: 'twitter:description', content: 'Connect with Adhitya Tri Wahyu Utomo, a Software Engineer specializing in web development and scalable applications.' }
+  ]
+});
 </script>
