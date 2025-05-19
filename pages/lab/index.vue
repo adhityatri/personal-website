@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-1 my-10 flex-col">
-    <app-title class="mb-12"> Blog Page </app-title>
+    <app-title class="mb-12"> Labs Page </app-title>
 
     <div class="flex justify-center items-center flex-col">
       <UIcon class="text-[4rem]" name="line-md:hazard-lights-filled-loop" />
@@ -17,15 +17,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-definePageMeta({
-  title: 'Blog',
-  name: 'blog-pages'
-});
-
-const router = useRouter();
-const goBack = () => {
-  router.back();
-};
-</script>

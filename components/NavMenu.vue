@@ -22,6 +22,10 @@ const menuItems = ref<NavigationMenuItem[]>([
     to: '/blog'
   },
   {
+    label: 'Lab',
+    to: '/lab'
+  },
+  {
     label: 'Work',
     to: '/work'
   },

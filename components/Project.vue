@@ -4,7 +4,9 @@
       isMobile ? 'w-[85%] self-center' : 'w-full'
     } flex flex-col gap-2`"
   >
-    <app-title>Latest Selected Projects</app-title>
+    <app-title>
+      <slot name="componentTitle"> Latest Selected Projects </slot>
+    </app-title>
 
     <div class="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       <card v-for="(item, index) in projectList" :key="index">
@@ -13,7 +15,9 @@
           {{ item.title }}
         </div>
 
-        <span class="mt-4 text-sm line-clamp-2">{{ item.descriptions ?? ' No Descriptions ' }}</span>
+        <span class="mt-4 text-sm line-clamp-2">{{
+          item.descriptions ?? ' No Descriptions '
+        }}</span>
 
         <br />
         <ul
@@ -29,6 +33,7 @@
         </ul>
       </card>
       <UButton
+        v-if="props.mode === 'homepage'"
         @click="moreProject"
         icon="line-md:chevron-right-circle"
         class="w-fit my-4 bg-white text-[#006d77] hover:bg-[#83c5be] ring-1 ring-[#83c5be] hover:text-[#006d77] hover:ring-[#006d77]]"
