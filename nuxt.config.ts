@@ -28,9 +28,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   ui: {
     colorMode: false,
-    theme: {
-      // colors: ['primary', 'error'],
-    }
   },
   devServer: {
     port: 3001,
@@ -38,7 +35,12 @@ export default defineNuxtConfig({
   },
   image:{
     imageengine :{
-      baseURL : '85iby668.dev.cdn.imgeng.in'
+      baseURL : 'https://85iby668.dev.cdn.imgeng.in',
+      modifiers: {
+        format: 'avif',
+        quality: '60%',
+        fit: 'cover'
+      }
     }
   }
 });

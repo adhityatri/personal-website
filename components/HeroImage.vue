@@ -7,8 +7,7 @@
     <div class="absolute z-0 left-1 bottom-11 bg-neutral-100 rounded-[40px] w-[40px] h-[40px]" />
     <div :class="`z-1 ring-10 mr-4 ring-[#83c5be] relative rounded-[80px] overflow-hidden border-4 border-neutral-100 ${isMobile ? 'w-[200px]' : 'w-[300px]'
       }`">
-      <nuxt-img provider="imageengine" src="/me.jpg" width="100" height="80" />
-      <!-- <img src="~assets/images/me.jpg" alt="" /> -->
+      <nuxt-img provider="imageengine" src="/me.jpg" alt="my-photo" />
     </div>
   </div>
 </template>
