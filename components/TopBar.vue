@@ -3,7 +3,7 @@
     as="nav"
     :class="useDevice().isDesktopOrTablet ? desktopClass : mobileClass"
   >
-    <app-brand />
+    <app-brand hydrate-never/>
     <nav-menu v-if="useDevice().isDesktopOrTablet" />
   </UContainer>
 </template>

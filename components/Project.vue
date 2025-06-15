@@ -16,7 +16,7 @@
         </div>
 
         <span class="mt-4 text-sm line-clamp-2">{{
-          item.descriptions ?? ' No Descriptions '
+          item?.descriptions ?? ' No Descriptions '
         }}</span>
 
         <br />

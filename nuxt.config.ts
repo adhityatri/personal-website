@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   experimental: {
     componentIslands: true
   },
-  modules: ['@nuxt/ui', '@nuxtjs/device'],
+  modules: ['@nuxt/ui', '@nuxtjs/device', '@nuxt/image'],
   css: ['~/assets/css/main.css'],
   ui: {
     colorMode: false,
@@ -35,5 +35,10 @@ export default defineNuxtConfig({
   devServer: {
     port: 3001,
     host: '0.0.0.0'
+  },
+  image:{
+    imageengine :{
+      baseURL : '85iby668.dev.cdn.imgeng.in'
+    }
   }
 });

@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center gap-2">
-    <nuxt-link to="/"><b class="text-[#006d77]">UTOMO</b>SOLUTIONS</nuxt-link>
+    <nuxt-link to="/" class="text-[#006d77] font-bold">ATWU</nuxt-link>
     <template v-if="!isMobile">
       <div>|</div>
       <Transition name="fade" mode="out-in">

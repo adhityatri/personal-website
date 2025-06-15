@@ -16,10 +16,10 @@ useHead({
 
 <template>
   <div class="flex flex-col flex-1">
-    <hero-profile />
-    <quote />
-    <bio class="mt-[4em] mb-[6em]" />
-    <project />
-    <promote class="mt-8" :with-action="true" />
+    <hero-profile hydrate-never/>
+    <quote hydrate-never/>
+    <bio class="mt-[4em] mb-[6em]" hydrate-never/>
+    <project hydrate-never/>
+    <promote class="mt-8" :with-action="true" hydrate-never/>
   </div>
 </template>

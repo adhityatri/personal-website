@@ -25,31 +25,26 @@
   {
     "title": "PADSIM",
     "client": "Pertamina",
-    "descriptions": "",
     "technology": ["figma", "git", "NuxtJs"]
   },
   {
     "title": "Bug Fix : Dreamwell",
     "client": "Pertamina",
-    "descriptions": "",
     "technology": ["figma", "git", "NuxtJs"]
   },
   {
     "title": "McEasy : Smart Tracker GPS",
     "client": "McEasy",
-    "descriptions": "",
     "technology": ["Ionic", "Adobe Xd", "Angular"]
   },
   {
     "title": "FKPPN : Portal Website",
     "client": "Fkppn Surabaya",
-    "descriptions": "",
     "technology": ["Vue/Nuxt", "Scss", "Express", "Figma", "Git", "MySql"]
   },
   {
     "title": "SAKU APP",
     "client": "Poltekkes Surabaya",
-    "descriptions": "",
     "technology": ["NuxtJs", "Scss", "Figma", "Git"]
   }
 ]

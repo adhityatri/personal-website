@@ -1,5 +1,9 @@
-@import 'tailwindcss';
-@import '@nuxt/ui';
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+#__nuxt {
+  @apply h-screen flex flex-col;
+}
 
 :root {
   --ui-container: 900px;
