@@ -22,7 +22,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   compatibilityDate: '2025-05-01',
   experimental: {
-    componentIslands: true
+    componentIslands: true,
+    viewTransition: true
   },
   modules: ['@nuxt/ui', '@nuxtjs/device', '@nuxt/image'],
   css: ['~/assets/css/main.css'],
