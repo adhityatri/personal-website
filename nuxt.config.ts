@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     head: {
-      title: 'utomosolutions.com | Adhitya Tri Wahyu Utomo | Software Engineer',
+      title: 'Adhitya Tri Wahyu Utomo | Software Engineer',
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         {
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
   devServer: {
     port: 3001,
-    host: '0.0.0.0'
+    host: 'localhost'
   },
   image:{
     imageengine :{

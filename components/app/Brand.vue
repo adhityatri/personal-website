@@ -1,42 +1,11 @@
 <template>
   <div class="flex items-center gap-2">
-    <nuxt-link to="/" class="text-[#006d77] font-bold">ATWU</nuxt-link>
-    <template v-if="!isMobile">
-      <div>|</div>
-      <Transition name="fade" mode="out-in">
-        <div class="text-md" :key="currentText">{{ currentText }}</div>
-      </Transition>
-    </template>
+    <nuxt-link to="/" class="text-[#006d77] font-bold">
+      <img src="/logo.svg" height="32" width="32" alt="logo" />
+    </nuxt-link>
   </div>
 </template>
 
 <script setup>
 const { isMobile } = useDevice();
-const texts = [
-  'Adhitya Tri Wahyu Utomo',
-  'Software Engineer',
-  'Vue.js Enthusiast'
-];
-
-const currentText = ref(texts[0]);
-let currentIndex = 0;
-
-onMounted(() => {
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % texts.length;
-    currentText.value = texts[currentIndex];
-  }, 10000);
-});
 </script>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
