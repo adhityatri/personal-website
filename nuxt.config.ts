@@ -17,7 +17,15 @@ export default defineNuxtConfig({
         }
       ]
     },
-    buildAssetsDir: 'assets'
+    buildAssetsDir: 'assets',
+    pageTransition: {
+      name: 'fade',
+      mode: 'out-in' // default
+    },
+    layoutTransition: {
+      name: 'slide',
+      mode: 'out-in' // default
+    }
   },
   devtools: { enabled: false },
   compatibilityDate: '2025-05-01',
@@ -28,15 +36,15 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxtjs/device', '@nuxt/image'],
   css: ['~/assets/css/main.css'],
   ui: {
-    colorMode: false,
+    colorMode: false
   },
   devServer: {
     port: 3001,
     host: 'localhost'
   },
-  image:{
-    imageengine :{
-      baseURL : 'https://85iby668.dev.cdn.imgeng.in',
+  image: {
+    imageengine: {
+      baseURL: 'https://85iby668.dev.cdn.imgeng.in',
       modifiers: {
         format: 'avif',
         quality: '60%',
