@@ -47,7 +47,7 @@ export default defineNuxtConfig({
       baseURL: 'https://85iby668.dev.cdn.imgeng.in',
       modifiers: {
         format: 'avif',
-        quality: '60%',
+        quality: '50%',
         fit: 'cover'
       }
     }
