@@ -1,6 +1,6 @@
 <template>
   <UContainer
-    as="nav"
+    as="header"
     :class="useDevice().isDesktopOrTablet ? desktopClass : mobileClass"
   >
     <app-brand hydrate-never/>

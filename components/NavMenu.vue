@@ -3,8 +3,8 @@
     <UNavigationMenu :items="menuItems"> </UNavigationMenu>
     <UButton
       icon="line-md:download-loop"
-      variant="primary"
-      class="h-fit bg-[#006d77] hover:bg-[#83c5be] text-white"
+      variant="outline"
+      class="cursor-pointer"
       size="md"
       @click="downloadResume()"
     >
@@ -12,7 +12,7 @@
     </UButton>
   </div>
   <USlideover v-model:open="open" v-else>
-    <UButton icon="i-lucide-align-right" variant="soft" />
+    <UButton class="cursor-pointer" icon="i-lucide-align-right" variant="soft" />
 
     <template #header>
       <div class="flex justify-between items-center flex-1 px-2">
@@ -21,6 +21,7 @@
           icon="i-lucide-indent-increase"
           variant="soft"
           size="md"
+          class="cursor-pointer"
           @click="open = false"
         >
         </UButton>

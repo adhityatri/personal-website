@@ -1,7 +1,8 @@
 <template>
   <UButton
     icon="line-md:coffee-half-empty-twotone-loop"
-    class="w-fit bg-[#006d77] hover:bg-[#83c5be]"
+    class="w-full bg-[#006d77] hover:bg-[#83c5be] cursor-pointer"
+    :class="{ 'w-fit': isDesktopOrTablet }"
     size="xl"
     @click="GetInTouch()"
   >
@@ -10,6 +11,7 @@
 </template>
 
 <script setup lang="ts">
+const { isDesktopOrTablet } = useDevice();
 const email = 'adhityatri.work@gmail.com';
 const subject = 'Hello, Adhitya!';
 const GetInTouch = () => {

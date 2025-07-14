@@ -9,7 +9,7 @@
       <div class="">
         <div class="text-[2.5rem] text-gray-600">Hello,</div>
         <div class="h-[4px] w-[40px] bg-[#006d77] rounded-xl"></div>
-        <div class="text-[2rem] font-bold">I'm {{ hero.name }}</div>
+        <div class="text-[1.5rem] lg:text-[2rem] font-bold">I'm {{ hero.name }}</div>
         <Transition name="fade" mode="out-in">
           <!-- <div class="text-md" :key="currentText">{{ currentText }}</div> -->
           <div class="text-xl text-[#006d77]" :key="currentText">
@@ -46,7 +46,6 @@ const hero = ref({
 
 const texts = [
   "Software Engineer",
-  "Vue.js Enthusiast",
   "Jember, Indonesia"
 ] as const;
 
