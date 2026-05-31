@@ -1,37 +1,59 @@
 <template>
-  <div class="flex items-center gap-4">
+  <div class="flex items-center gap-4" v-if="!isMobile">
     <UNavigationMenu :items="menuItems"> </UNavigationMenu>
     <UButton
       icon="line-md:download-loop"
-      variant="primary"
-      class="h-fit bg-[#006d77] hover:bg-[#83c5be] text-white"
+      variant="outline"
+      class="cursor-pointer"
       size="md"
       @click="downloadResume()"
     >
       Resume
     </UButton>
   </div>
+  <USlideover v-model:open="open" v-else>
+    <UButton class="cursor-pointer" icon="i-lucide-align-right" variant="soft" />
+
+    <template #header>
+      <div class="flex justify-between items-center flex-1 px-2">
+        <app-brand />
+        <UButton
+          icon="i-lucide-indent-increase"
+          variant="soft"
+          size="md"
+          class="cursor-pointer"
+          @click="open = false"
+        >
+        </UButton>
+      </div>
+    </template>
+
+    <template #body>
+      <UNavigationMenu  orientation="vertical" :items="menuItems" />
+    </template>
+  </USlideover>
 </template>
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui';
+const { isMobile } = useDevice();
 
+const open = ref(false);
 const menuItems = ref<NavigationMenuItem[]>([
   {
     label: 'Blog',
-    to: '/blog'
+    to: '/blog',
+    onSelect: () => open.value = false
   },
-  // {
-  //   label: 'Lab',
-  //   to: '/lab'
-  // },
   {
     label: 'Work',
-    to: '/work'
+    to: '/work',
+    onSelect: () => open.value = false
   },
   {
     label: 'Contact',
-    to: '/contact'
+    to: '/contact',
+    onSelect: () => open.value = false
   }
 ]);
 
@@ -46,4 +68,8 @@ const downloadResume = async () => {
     }
   });
 };
+
+defineShortcuts({
+  o: () => (open.value != open.value)
+})
 </script>

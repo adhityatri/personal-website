@@ -38,7 +38,7 @@ const bio = [
     description: ''
   },
   {
-    name: 'Self-Employed - Freelance Software Developer',
+    name: '<b>Self-Employed</b>',
     year: '2025',
     description: 'Providing software development and frontend engineering services for various clients. Specializing in modern web technologies and application development'
   }

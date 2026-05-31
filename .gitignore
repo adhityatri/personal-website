@@ -26,3 +26,4 @@ bun.lock
 .env
 .env.*
 !.env.example
+pnpm-lock.yaml
